@@ -21,10 +21,10 @@ namespace Eshop.Category.Mapping
             CreateMap<Product, ResultProductDto>().ReverseMap();
             CreateMap<Product, GetByIdProductDto>().ReverseMap();
 
-            CreateMap<ProductDetail, CreateProductDetailDto>().ReverseMap();
-            CreateMap<ProductDetail, UpdateProductDetailDto>().ReverseMap();
-            CreateMap<ProductDetail, ResultProductDetailDto>().ReverseMap();
-            CreateMap<ProductDetail, GetByIdProductDetailDto>().ReverseMap();
+            CreateMap<Category.Entities.ProductDetail, CreateProductDetailDto>().ReverseMap();
+            CreateMap<Category.Entities.ProductDetail, UpdateProductDetailDto>().ReverseMap();
+            CreateMap<Category.Entities.ProductDetail, ResultProductDetailDto>().ReverseMap();
+            CreateMap<Category.Entities.ProductDetail, GetByIdProductDetailDto>().ReverseMap();
 
             CreateMap<ProductImage, CreateProductImageDto>().ReverseMap();
             CreateMap<ProductImage, UpdateProductImageDto>().ReverseMap();
