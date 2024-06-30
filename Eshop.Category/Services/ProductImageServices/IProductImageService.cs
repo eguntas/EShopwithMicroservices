@@ -1,6 +1,6 @@
 ﻿using Eshop.Category.Dtos.ProductImageDtos;
 
-namespace Eshop.Category.Services.ProductImageImageServices
+namespace Eshop.Category.Services.ProductImageServices
 {
     public interface IProductImageService
     {

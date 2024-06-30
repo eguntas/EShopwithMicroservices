@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Eshop.Category.Dtos.ProductImageDtos;
-using Eshop.Category.Services.ProductImageImageServices;
 using Eshop.Category.Settings;
 using MongoDB.Driver;
 
