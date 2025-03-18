@@ -2,9 +2,12 @@ using Eshop.Order.Application.Features.CQRS.Handlers.AddressHandlers;
 using Eshop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 using Eshop.Order.Application.Interfaces;
 using Eshop.Order.Application.Services;
+using Eshop.Order.Persistance.Context;
 using Eshop.Order.Persistance.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<OrderContext>();
 
 builder.Services.AddScoped(typeof(IRepository<>) , typeof(Repository<>));
 builder.Services.AddApplicationService(builder.Configuration);

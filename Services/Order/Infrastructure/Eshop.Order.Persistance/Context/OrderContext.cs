@@ -1,10 +1,5 @@
 ﻿using Eshop.Order.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Eshop.Order.Persistance.Context
 {
@@ -12,7 +7,7 @@ namespace Eshop.Order.Persistance.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=..;Initial Catalog=MultiShopOrderDB;integrated security=true;");
+            optionsBuilder.UseSqlServer("Server=localhost,1440;Initial Catalog=MultiShopOrderDB;User=sa;Password=Ercan7154230.");
         }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }

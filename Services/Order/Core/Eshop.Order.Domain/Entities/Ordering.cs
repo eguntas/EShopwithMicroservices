@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Eshop.Order.Domain.Entities
+﻿namespace Eshop.Order.Domain.Entities
 {
     public class Ordering
     {
@@ -12,6 +6,5 @@ namespace Eshop.Order.Domain.Entities
         public string UserId { get; set; }
         public decimal TotalPrice { get; set; }
         public DateTime OrderDate { get; set; }
-        public List<OrderDetail> OrderDetails { get; set; }
     }
 }
