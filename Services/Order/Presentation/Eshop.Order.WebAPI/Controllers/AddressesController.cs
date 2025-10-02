@@ -1,11 +1,12 @@
 ﻿using Eshop.Order.Application.Features.CQRS.Commands.AddressCommands;
 using Eshop.Order.Application.Features.CQRS.Handlers.AddressHandlers;
 using Eshop.Order.Application.Features.CQRS.Queries.AddressQueries;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eshop.Order.WebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AddressesController : ControllerBase

@@ -1,9 +1,11 @@
 ﻿using Eshop.Category.Dtos.ProductImageDtos;
 using Eshop.Category.Services.ProductImageServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eshop.Category.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductImageController : ControllerBase

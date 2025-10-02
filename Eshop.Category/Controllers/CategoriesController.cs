@@ -1,10 +1,12 @@
 ﻿using Eshop.Category.Dtos.CategoryDtos;
 using Eshop.Category.Services.CategoryServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eshop.Category.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase

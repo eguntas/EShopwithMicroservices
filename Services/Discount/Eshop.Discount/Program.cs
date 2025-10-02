@@ -3,6 +3,13 @@ using Eshop.Discount.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
+    {
+        options.Authority = builder.Configuration["IdentityServerURL"];
+        options.RequireHttpsMetadata = false;
+        options.Audience = "ResourceDiscount";
+    });
 // Add services to the container.
 builder.Services.AddTransient<DapperContext>();
 builder.Services.AddTransient<IDiscountService ,DiscountService>(); 
@@ -21,7 +28,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

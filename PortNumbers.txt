@@ -1,0 +1,3 @@
+IdentityServer -> 5000
+Category -> 7000
+Discount -> 7001

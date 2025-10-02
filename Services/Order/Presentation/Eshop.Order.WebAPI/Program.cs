@@ -7,6 +7,14 @@ using Eshop.Order.Persistance.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
+    {
+        options.Authority = builder.Configuration["IdentityServerURL"];
+        options.RequireHttpsMetadata = false;
+        options.Audience = "ResourceOrder";
+    });
+
 builder.Services.AddDbContext<OrderContext>();
 
 builder.Services.AddScoped(typeof(IRepository<>) , typeof(Repository<>));
@@ -41,7 +49,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
