@@ -2,7 +2,7 @@
 
 namespace Eshop.Cargo.DataAccessLayer.Abstract
 {
-    public interface ICargoOperation : IGenericDal<CargoOperation>
+    public interface ICargoOperationDal : IGenericDal<CargoOperation>
     {
     }
 }
