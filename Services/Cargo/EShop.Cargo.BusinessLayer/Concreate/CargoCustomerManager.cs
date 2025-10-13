@@ -1,15 +1,10 @@
 ﻿using Eshop.Cargo.DataAccessLayer.Abstract;
 using EShop.Cargo.BusinessLayer.Abstract;
 using EShop.Cargo.EntityLayer.Concreate;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EShop.Cargo.BusinessLayer.Concreate
 {
-    public class CargoCustomerManager : IGenericService<CargoCustomer>
+    public class CargoCustomerManager : ICargoCustomerService
     {
         private readonly ICargoCustomerDal _cargoCustomerDal;
         public CargoCustomerManager(ICargoCustomerDal cargoCustomerDal)

@@ -1,11 +1,13 @@
 ﻿using EShop.Cargo.BusinessLayer.Abstract;
 using EShop.Cargo.DtoLayer.CargoCompanyDtos;
 using EShop.Cargo.EntityLayer.Concreate;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EShop.Cargo.WebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CargoCompanyController : ControllerBase

@@ -1,13 +1,9 @@
 ﻿using Eshop.Cargo.DataAccessLayer.Abstract;
-using Eshop.Cargo.DataAccessLayer.EntityFramework;
 using EShop.Cargo.BusinessLayer.Abstract;
 using EShop.Cargo.EntityLayer.Concreate;
 
 namespace EShop.Cargo.BusinessLayer.Concreate
 {
-    
-
-    
     public class CargoDetailManager : ICargoDetailService
     {
         private readonly ICargoDetailDal _cargoDetailDal;

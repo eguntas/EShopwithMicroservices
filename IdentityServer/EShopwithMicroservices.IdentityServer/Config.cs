@@ -24,6 +24,10 @@ namespace EShopwithMicroservices.IdentityServer
                 {
                     Scopes = {"OrderFullPermission" },
                 },
+                new ApiResource("ResourceCargo")
+                { 
+                    Scopes = {"CargoFullPermission"} 
+                },
                 new ApiResource(IdentityServerConstants.LocalApi.ScopeName)               
         };
 
@@ -39,6 +43,7 @@ namespace EShopwithMicroservices.IdentityServer
                 new ApiScope("DiscountFullPermission","Full authority for Discount API"),
                 new ApiScope("OrderFullPermission","Full authority for Order API"),
                 new ApiScope("CatalogReadPermission","Read authority for Catalog API"),
+                new ApiScope("CargoFullPermission","Full authority for Cargo API"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
 
         };
@@ -66,7 +71,7 @@ namespace EShopwithMicroservices.IdentityServer
                     ClientName="Multi Shop Admin User",
                     AllowedGrantTypes=GrantTypes.ClientCredentials,
                     ClientSecrets={ new Secret("multishopsecret".Sha256()) },
-                    AllowedScopes={ "CatalogFullPermission", "CatalogReadPermission" , "DiscountFullPermission" , "OrderFullPermission",
+                    AllowedScopes={ "CatalogFullPermission", "CatalogReadPermission" , "DiscountFullPermission" , "OrderFullPermission", "CargoFullPermission",
                     IdentityServerConstants.LocalApi.ScopeName,
                     IdentityServerConstants.StandardScopes.Email,
                     IdentityServerConstants.StandardScopes.OpenId,
