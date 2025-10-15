@@ -1,0 +1,13 @@
+﻿namespace EShop.Basket.LoginService
+{
+    public class LoginService:ILoginService
+    {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public LoginService(IHttpContextAccessor httpContextAccessor)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
+        public string GetUserId => _httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "sub")?.Value;
+        
+    }
+}
