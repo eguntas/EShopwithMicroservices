@@ -36,7 +36,7 @@ namespace Eshop.Category.Services.CategoryServices
 
         public async Task<GetByIdCategoryDto> GetByIdCategoryAsync(string id)
         {
-            var value = _categoryCollection.Find<Eshop.Category.Entities.Category>(x=>x.CategoryID == id).FirstOrDefaultAsync();
+            var value = await _categoryCollection.Find<Eshop.Category.Entities.Category>(x=>x.CategoryID == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdCategoryDto>(value);
         }
 

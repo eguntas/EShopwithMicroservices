@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_AdminLayoutHeadComponentPartial")
+<body class="sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        @await Component.InvokeAsync("_AdminLayoutHeaderComponentPartial")
+        @await Component.InvokeAsync("_AdminLayoutLayoutSidebarComponentPartial")
+        
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+           @*  <section class="content-header">
+                <h1>Basic Tables</h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="active"><i class="fa fa-envelope-o"></i> Tables</li>
+                    <li class="active"><i class="fa fa-bars"></i> Basic Tables</li>
+                </ol>
+            </section> *@
+            @await Component.InvokeAsync("_AdminLayoutMainSectionComponentPartial")
+            <!-- Main content -->
+            @RenderBody()
+            
+            <!-- content -->
+        </div>
+        <!-- content-wrapper -->
+        <!-- Main Footer -->
+        <footer class="main-footer dark-bg">
+            <div class="pull-right hidden-xs"> Version 1.0</div>
+            Copyright &copy; 2017 Yourdomian. All rights reserved.
+        </footer>
+    </div>
+    <!-- wrapper -->
+    <!-- jQuery -->
+    <script src="~/MainDownload-OvioAdmin-html5-template/html/dist/js/jquery.min.js"></script>
+    <script src="~/MainDownload-OvioAdmin-html5-template/html/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/MainDownload-OvioAdmin-html5-template/html/dist/js/ovio.js"></script>
+</body>
+</html>
