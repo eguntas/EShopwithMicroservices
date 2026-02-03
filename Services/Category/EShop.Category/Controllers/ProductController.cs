@@ -9,7 +9,10 @@ namespace Eshop.product.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
-
+        public ProductController(IProductService productService)
+        {
+            _productService = productService;
+        }
         [HttpGet]
         public async Task<IActionResult> productList()
         {
@@ -39,6 +42,12 @@ namespace Eshop.product.Controllers
         {
             await _productService.UpdateProductAsync(updateproductDto);
             return Ok("Updated product success");
+        }
+        [HttpGet("ProductListWithCategory")]
+        public async Task<IActionResult> GetProductsWithCategory()
+        {
+            var values = await _productService.GetProductsWithCategoryAsync();
+            return Ok(values);
         }
 
     }

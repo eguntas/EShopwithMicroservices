@@ -1,5 +1,6 @@
 ﻿using Eshop.Category.Dtos.CategoryDtos;
 using Eshop.Category.Dtos.ProductDtos;
+using EShop.Category.Dtos.ProductDtos;
 
 namespace Eshop.Category.Services.ProductServices
 {
@@ -10,5 +11,6 @@ namespace Eshop.Category.Services.ProductServices
         Task UpdateProductAsync(UpdateProductDto updateProductDto);
         Task DeleteProductAsync(string id);
         Task<GetByIdProductDto> GetByIdProductAsync(string id);
+        Task<List<ResultProductWithCategoryDto>> GetProductsWithCategoryAsync();
     }
 }

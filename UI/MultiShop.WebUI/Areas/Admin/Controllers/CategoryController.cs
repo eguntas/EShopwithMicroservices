@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.DtoLayer.CatalogDtos.CategoryDtos;
-using System.Globalization;
 using System.Text;
 
 namespace MultiShop.WebUI.Areas.Admin.Controllers
@@ -16,6 +15,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
         {
             _httpClientFactory = httpClientFactory;
         }
+
         [Route("Index")]
         public async Task<IActionResult> Index()
         {
@@ -46,8 +46,9 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
             ViewBag.v0 = "Categories Transaction";
             return View();
         }
-        [Route("CreateCategory")]
+
         [HttpPost]
+        [Route("CreateCategory")]
         public async Task<IActionResult> CreateCategory(CreateCategoryDtos dtos)
         {
             var client = _httpClientFactory.CreateClient();
@@ -60,8 +61,8 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
             }
             return View();
         }
-        [Route("DeleteCategory/{id}")]
 
+        [Route("DeleteCategory/{id}")]
         public async Task<IActionResult> DeleteCategory(string id)
         {
             var client = _httpClientFactory.CreateClient();
@@ -91,6 +92,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
             }
             return View();
         }
+
         [HttpPost]
         [Route("UpdateCategory/{id}")]
         public async Task<IActionResult> UpdateCategory(UpdateCategoryDto dtos)
@@ -104,7 +106,6 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Category", new { area = "Admin" });
             }
             return View();
-
         }
     }
 }

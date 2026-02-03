@@ -4,6 +4,9 @@ using Eshop.Category.Dtos.ProductDetailDtos;
 using Eshop.Category.Dtos.ProductDtos;
 using Eshop.Category.Dtos.ProductImageDtos;
 using Eshop.Category.Entities;
+using EShop.Category.Dtos.FeatureSliderDtos;
+using EShop.Category.Dtos.ProductDtos;
+using EShop.Category.Entities;
 
 namespace Eshop.Category.Mapping
 {
@@ -20,6 +23,7 @@ namespace Eshop.Category.Mapping
             CreateMap<Product, UpdateProductDto>().ReverseMap();
             CreateMap<Product, ResultProductDto>().ReverseMap();
             CreateMap<Product, GetByIdProductDto>().ReverseMap();
+            CreateMap<Product, ResultProductWithCategoryDto>().ReverseMap();
 
             CreateMap<Category.Entities.ProductDetail, CreateProductDetailDto>().ReverseMap();
             CreateMap<Category.Entities.ProductDetail, UpdateProductDetailDto>().ReverseMap();
@@ -30,6 +34,12 @@ namespace Eshop.Category.Mapping
             CreateMap<ProductImage, UpdateProductImageDto>().ReverseMap();
             CreateMap<ProductImage, GetByIdProductImageDto>().ReverseMap();
             CreateMap<ProductImage, ResultProductImageDto>().ReverseMap();
+
+            CreateMap<FeatureSlider, CreateFeatureSliderDto>().ReverseMap();
+            CreateMap<FeatureSlider, UpdateFeatureSliderDto>().ReverseMap();
+            CreateMap<FeatureSlider, ResultFeatureSliderDto>().ReverseMap();
+            CreateMap<FeatureSlider, GetByIdFeatureSliderDto>().ReverseMap();
+            
         }
     }
 }
