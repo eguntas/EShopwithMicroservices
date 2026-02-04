@@ -1,0 +1,42 @@
+﻿@model List<ResultSpecialOfferDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Special Offer Tables</h4>
+                <p>Special Offer Transaction</p>
+                <div class="bs-example" data-example-id="bordered-table">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Special Offer Title</th>
+                                <th>Special Offer SubTitle</th>
+                                <th>Delete</th>
+                                <th>Update</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@item.Title</th>
+                                    <td>@item.SubTitle</td>
+                                    <td><a href="/Admin/SpecialOffer/DeleteSpecialOffer/@item.SpecialOfferId" class="btn btn-danger">Delete</a></td>
+                                    <td><a href="/Admin/SpecialOffer/UpdateSpecialOffer/@item.SpecialOfferId" class="btn btn-success">Update</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href="/Admin/SpecialOffer/CreateSpecialOffer/" class="btn btn-success">New Special Offer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

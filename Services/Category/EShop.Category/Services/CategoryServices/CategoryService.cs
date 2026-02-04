@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Eshop.Category.Dtos.CategoryDtos;
-using Eshop.Category.Entities;
 using Eshop.Category.Settings;
 using MongoDB.Driver;
 
