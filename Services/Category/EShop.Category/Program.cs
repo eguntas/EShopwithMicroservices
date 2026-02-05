@@ -5,6 +5,7 @@ using Eshop.Category.Services.ProductServices;
 using Eshop.Category.Settings;
 using Eshop.ProductDetail.Services.ProductDetailServices;
 using EShop.Brand.Services.BrandServices;
+using EShop.Category.Services.AboutServices;
 using EShop.Category.Services.BrandServices;
 using EShop.Category.Services.FeatureServices;
 using EShop.Category.Services.FeatureSliderServices;
@@ -33,6 +34,7 @@ builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
 builder.Services.AddScoped<IFeatureService, FeatureService>();
 builder.Services.AddScoped<IOfferDiscountService, OfferDiscountService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

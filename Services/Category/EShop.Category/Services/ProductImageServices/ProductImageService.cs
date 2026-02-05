@@ -41,6 +41,12 @@ namespace Eshop.Category.Services.ProductImageServices
             return _mapper.Map<GetByIdProductImageDto>(value);
         }
 
+        public async Task<GetByIdProductImageDto> GetByProductIdImageAsync(string id)
+        {
+            var values = await _ProductImageCollection.Find(x => x.ProductID == id).FirstOrDefaultAsync();
+            return _mapper.Map<GetByIdProductImageDto>(values);
+        }
+
         public async Task UpdateProductImageAsync(UpdateProductImageDto updateProductImageDto)
         {
             var value = _mapper.Map<Eshop.Category.Entities.ProductImage>(updateProductImageDto);

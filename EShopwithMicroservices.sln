@@ -66,6 +66,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comment", "Comment", "{83CBB413-903C-4FCB-9552-812920D78BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Comment", "Services\Comment\EShop.Comment\EShop.Comment.csproj", "{80152D16-3578-4C00-98F9-BB79E65C9FDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -132,6 +136,10 @@ Global
 		{4D8ECFBC-1437-465E-832B-1D30926BD6D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8ECFBC-1437-465E-832B-1D30926BD6D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8ECFBC-1437-465E-832B-1D30926BD6D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80152D16-3578-4C00-98F9-BB79E65C9FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80152D16-3578-4C00-98F9-BB79E65C9FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80152D16-3578-4C00-98F9-BB79E65C9FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80152D16-3578-4C00-98F9-BB79E65C9FDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +168,8 @@ Global
 		{D55B718C-E774-4D41-919A-2F7A6DBEB418} = {0A063CE4-C206-45D0-A85E-64DF6A0C4115}
 		{CE96619A-8798-4D5D-B107-03915B0C438F} = {7E3D8E15-6436-4190-841C-76F9DC0758FF}
 		{4D8ECFBC-1437-465E-832B-1D30926BD6D7} = {7E3D8E15-6436-4190-841C-76F9DC0758FF}
+		{83CBB413-903C-4FCB-9552-812920D78BCF} = {242BE2AA-17ED-4E4A-9879-82AD15D47288}
+		{80152D16-3578-4C00-98F9-BB79E65C9FDA} = {83CBB413-903C-4FCB-9552-812920D78BCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE735E3E-B9D4-478A-9CB6-0E213126AADB}

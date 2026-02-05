@@ -39,7 +39,13 @@ namespace Eshop.Category.Services.ProductDetailDetailServices
 
         public async Task<GetByIdProductDetailDto> GetByIdProductDetailAsync(string id)
         {
-            var value = _ProductDetailCollection.Find<Eshop.Category.Entities.ProductDetail>(x => x.ProductDetailID == id).FirstOrDefaultAsync();
+            var value = await _ProductDetailCollection.Find<Eshop.Category.Entities.ProductDetail>(x => x.ProductDetailID == id).FirstOrDefaultAsync();
+            return _mapper.Map<GetByIdProductDetailDto>(value);
+        }
+
+        public async Task<GetByIdProductDetailDto> GetByIdProductIdProductDetailAsync(string id)
+        {
+            var value = await _ProductDetailCollection.Find<Eshop.Category.Entities.ProductDetail>(x => x.ProductId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdProductDetailDto>(value);
         }
 

@@ -4,6 +4,7 @@ using Eshop.Category.Dtos.ProductDetailDtos;
 using Eshop.Category.Dtos.ProductDtos;
 using Eshop.Category.Dtos.ProductImageDtos;
 using Eshop.Category.Entities;
+using EShop.Category.Dtos.AboutDtos;
 using EShop.Category.Dtos.BrandDtos;
 using EShop.Category.Dtos.FeatureDtos;
 using EShop.Category.Dtos.FeatureSliderDtos;
@@ -63,6 +64,12 @@ namespace Eshop.Category.Mapping
             CreateMap<Brand, UpdateBrandDto>().ReverseMap();
             CreateMap<Brand, ResultBrandDto>().ReverseMap();
             CreateMap<Brand, GetByIdBrandDto>().ReverseMap();
+
+
+            CreateMap<About, CreateAboutDto>().ReverseMap();
+            CreateMap<About, UpdateAboutDto>().ReverseMap();
+            CreateMap<About, ResultAboutDto>().ReverseMap();
+            CreateMap<About, GetByIdAboutDto>().ReverseMap();
 
 
         }

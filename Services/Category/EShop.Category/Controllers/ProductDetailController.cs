@@ -6,9 +6,14 @@ namespace Eshop.Category.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductDetailDetailController : ControllerBase
+    public class ProductDetailController : ControllerBase
     {
         private readonly IProductDetailService _productDetailService;
+
+        public ProductDetailController(IProductDetailService productDetailService)
+        {
+            _productDetailService = productDetailService;
+        }
 
         [HttpGet]
         public async Task<IActionResult> ProductDetailList()
@@ -20,6 +25,12 @@ namespace Eshop.Category.Controllers
         public async Task<IActionResult> GetProductDetailById(string id)
         {
             var values = await _productDetailService.GetByIdProductDetailAsync(id);
+            return Ok(values);
+        }
+        [HttpGet("GetProductDetailByProductId")]
+        public async Task<IActionResult> GetProductDetailByProductId(string id)
+        {
+            var values = await _productDetailService.GetByIdProductIdProductDetailAsync(id);
             return Ok(values);
         }
         [HttpPost]

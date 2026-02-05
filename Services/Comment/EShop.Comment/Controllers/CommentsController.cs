@@ -1,0 +1,57 @@
+﻿using EShop.Comment.Context;
+using EShop.Comment.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace EShop.Comment.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    [AllowAnonymous]
+    public class CommentsController : ControllerBase
+    {
+        private readonly CommentContext _commentContext;
+        public CommentsController(CommentContext commentContext)
+        {
+            _commentContext = commentContext;
+        }
+        [HttpGet]
+        public IActionResult CommentList()
+        {
+            var values = _commentContext.UserComments.ToList();
+            return Ok(values);
+        }
+        [HttpPost]
+        public IActionResult AddComment(UserComment userComment)
+        {
+            _commentContext.Add(userComment);
+            _commentContext.SaveChanges();
+            return Ok("Added comment success");
+        }
+        [HttpPut]
+        public IActionResult UpdateComment(UserComment userComment)
+        {
+            _commentContext.Update(userComment);
+            _commentContext.SaveChanges();
+            return Ok("Updated comment success");
+        }
+
+        [HttpDelete]
+        public IActionResult UpdateComment(int id)
+        {
+            var value = _commentContext.UserComments.Find(id);
+            _commentContext.Remove(value);
+            _commentContext.SaveChanges();
+            return Ok("Deleted comment success");
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetComment(int id)
+        {
+            var value = _commentContext.UserComments.Find(id);
+            return Ok(value);
+
+        }
+    }
+}

@@ -5,12 +5,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Eshop.Category.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductImageController : ControllerBase
     {
         private readonly IProductImageService _productImageService;
+        public ProductImageController(IProductImageService productImageService)
+        {
+                _productImageService = productImageService;
+        }
+        
 
         [HttpGet]
         public async Task<IActionResult> ProductImageList()
@@ -18,6 +23,13 @@ namespace Eshop.Category.Controllers
             var values = await _productImageService.GetAllProductImageAsync();
             return Ok(values);
         }
+        [HttpGet("ProductImagesByProductId")]
+        public async Task<IActionResult> ProductImagesByProductId(string id)
+        {
+            var values = await _productImageService.GetByProductIdImageAsync(id);
+            return Ok(values);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductImageById(string id)
         {
