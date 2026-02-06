@@ -53,5 +53,11 @@ namespace EShop.Comment.Controllers
             return Ok(value);
 
         }
+        [HttpGet("CommentListByProductId")]
+        public IActionResult CommentListByProductId(string id)
+        {
+            var values = _commentContext.UserComments.Where(x => x.ProductId == id).ToList();
+            return Ok(values);
+        }
     }
 }
