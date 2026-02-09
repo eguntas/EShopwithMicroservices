@@ -21,7 +21,8 @@
                 </div>
             }
         </div>
-        <div class="col-md-6">
+        @await Html.PartialAsync("~/Views/Product/AddComment.cshtml", new { id = ViewBag.ProductId });
+@*         <div class="col-md-6">
             <h4 class="mb-4">Leave a review</h4>
             <small>Your email address will not be published. Required fields are marked *</small>
             <div class="d-flex my-3">
@@ -52,5 +53,5 @@
                 </div>
             </form>
         </div>
-    </div>
+ *@    </div>
 </div>
