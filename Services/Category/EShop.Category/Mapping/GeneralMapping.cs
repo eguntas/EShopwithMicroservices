@@ -6,6 +6,7 @@ using Eshop.Category.Dtos.ProductImageDtos;
 using Eshop.Category.Entities;
 using EShop.Category.Dtos.AboutDtos;
 using EShop.Category.Dtos.BrandDtos;
+using EShop.Category.Dtos.ContactDtos;
 using EShop.Category.Dtos.FeatureDtos;
 using EShop.Category.Dtos.FeatureSliderDtos;
 using EShop.Category.Dtos.OfferDiscountDtos;
@@ -70,6 +71,11 @@ namespace Eshop.Category.Mapping
             CreateMap<About, UpdateAboutDto>().ReverseMap();
             CreateMap<About, ResultAboutDto>().ReverseMap();
             CreateMap<About, GetByIdAboutDto>().ReverseMap();
+
+            CreateMap<Contact, CreateContactDto>().ReverseMap();
+            CreateMap<Contact, UpdateContactDto>().ReverseMap();
+            CreateMap<Contact, ResultContactDto>().ReverseMap();
+            CreateMap<Contact, GetByIdContactDto>().ReverseMap();
 
 
         }
