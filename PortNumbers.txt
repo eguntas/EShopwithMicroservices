@@ -1,5 +1,10 @@
+Ocelot -> 5001
 IdentityServer -> 5000
 Category -> 7000
 Discount -> 7001
 cargo -> 7002
 basket -> 7003
+Order -> 7004
+Comment -> 7005
+Payment -> 7006
+Images -> 7007
