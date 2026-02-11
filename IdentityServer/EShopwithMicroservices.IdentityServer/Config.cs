@@ -54,22 +54,25 @@ namespace EShopwithMicroservices.IdentityServer
         };
         public static IEnumerable<Client> Clients => new Client[]
         {
+                //Visitor Client
                 new Client
                 {
                     ClientId="MultiShopVisitorId",
                     ClientName="Multi Shop Visitor User",
                     AllowedGrantTypes=GrantTypes.ClientCredentials,
                     ClientSecrets={ new Secret("multishopsecret".Sha256()) },
-                    AllowedScopes={"CatalogReadPermission"}
+                    AllowedScopes={"CatalogReadPermission" }
                 },
+                //Manager Client
                 new Client
                 {
                     ClientId = "MultiShopManagerId",
                     ClientName="Multi Shop Manager User",
                     AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
                     ClientSecrets={ new Secret("multishopsecret".Sha256()) },
-                    AllowedScopes={"CatalogReadPermission" , "CatalogFullPermission" }
+                    AllowedScopes={"CatalogReadPermission" , "CatalogFullPermission" , "BasketFullPermission" }
                 },
+                //Admin Client
                 new Client
                 {
                     ClientId = "MultiShopAdminId",

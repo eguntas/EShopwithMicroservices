@@ -2,11 +2,13 @@
 using EShop.Category.Dtos.AboutDtos;
 using EShop.Category.Dtos.BrandDtos;
 using EShop.Category.Services.AboutServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EShop.Category.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AboutController : ControllerBase

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Eshop.Category.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductImageController : ControllerBase

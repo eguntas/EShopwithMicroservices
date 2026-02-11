@@ -1,9 +1,11 @@
 ﻿using EShop.Category.Dtos.FeatureSliderDtos;
 using EShop.Category.Services.FeatureSliderServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EShop.Category.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class FeatureSlidersController : Controller

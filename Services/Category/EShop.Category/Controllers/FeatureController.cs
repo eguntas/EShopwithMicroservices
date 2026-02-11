@@ -2,11 +2,13 @@
 using Eshop.Category.Services.CategoryServices;
 using EShop.Category.Dtos.FeatureDtos;
 using EShop.Category.Services.FeatureServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EShop.Category.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class FeatureController : ControllerBase

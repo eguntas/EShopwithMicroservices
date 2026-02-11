@@ -1,9 +1,11 @@
 ﻿using Eshop.Category.Dtos.ProductDtos;
 using Eshop.Category.Services.ProductServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eshop.product.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase

@@ -1,11 +1,12 @@
 ﻿using EShop.Brand.Services.BrandServices;
 using EShop.Category.Dtos.BrandDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EShop.Brand.Controllers
 {
-
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BrandController : ControllerBase
