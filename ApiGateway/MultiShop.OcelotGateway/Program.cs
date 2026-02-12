@@ -3,10 +3,16 @@ using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAuthentication()
+    .AddJwtBearer("OcelotAuthenticationScheme", options =>
+    {
+        options.Authority = builder.Configuration["IdentityServerURL"];
+        options.RequireHttpsMetadata = false;
+        options.Audience = "ResourceOcelot";
+    });
 
 
 IConfiguration configuration = new ConfigurationBuilder()
-    .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true)
     .Build();
 builder.Services.AddOcelot(configuration);

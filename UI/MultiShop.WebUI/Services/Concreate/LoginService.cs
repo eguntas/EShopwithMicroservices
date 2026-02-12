@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Security.Claims;
 
-namespace MultiShop.WebUI.Services
+namespace MultiShop.WebUI.Services.Concreate
 {
     public class LoginService:ILoginService
     {
