@@ -1,6 +1,6 @@
-﻿using EShop.Category.Dtos.FeatureSliderDtos;
+﻿using MultiShop.DtoLayer.CatalogDtos.FeatureSliderDtos;
 
-namespace EShop.Category.Services.FeatureSliderServices
+namespace MultiShop.WebUI.Services.FeatureSliderServices
 {
     public interface IFeatureSliderService
     {

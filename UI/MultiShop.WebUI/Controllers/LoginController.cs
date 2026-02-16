@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using MultiShop.DtoLayer.IdentityDtos.LoginDtos;
 using MultiShop.WebUI.Models;
 using MultiShop.WebUI.Services;
+using MultiShop.WebUI.Services.Concreate;
 using MultiShop.WebUI.Services.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace MultiShop.WebUI.Controllers
 {
@@ -68,15 +70,18 @@ namespace MultiShop.WebUI.Controllers
         }
 
         [HttpGet]
-        public IActionResult SignIn()
+        public async Task<IActionResult> SignIn()
         {
+            //await _identityService.SignInAsync(SignInDto signInDto);
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> SignIp(SignInDto dto)
+        public async Task<IActionResult> SignIn(SignInDto dto)
         {
-            return View();
+            await _identityService.SignInAsync(dto);
+            //return View();
+            return RedirectToAction("Index", "User");
         }
 
 
