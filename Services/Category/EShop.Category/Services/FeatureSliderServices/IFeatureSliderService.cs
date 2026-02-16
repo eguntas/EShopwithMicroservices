@@ -8,7 +8,7 @@ namespace EShop.Category.Services.FeatureSliderServices
         Task CreateFeatureSliderAsync(CreateFeatureSliderDto createFeatureSliderDto);
         Task UpdateFeatureSliderAsync(UpdateFeatureSliderDto updateFeatureSliderDto);
         Task DeleteFeatureSliderAsync(string id);
-        Task<UpdateFeatureSliderDto> GetByIdFeatureSliderAsync(string id);
+        Task<GetByIdFeatureSliderDto> GetByIdFeatureSliderAsync(string id);
         Task FeatureSliderChangeStatusToTrue(string id);
         Task FeatureSliderChangeStatusToFalse(string id);
     }

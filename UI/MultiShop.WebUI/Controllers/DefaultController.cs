@@ -6,7 +6,9 @@ namespace MultiShop.WebUI.Controllers
     {
         public IActionResult Index()
         {
-            var user = User.Claims;
+            ViewBag.Directory1 = "MultiShop";
+            ViewBag.Directory2 = "Home";
+            ViewBag.Directory3 = "Shopping";
 
             return View();
         }
