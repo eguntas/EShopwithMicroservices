@@ -12,9 +12,10 @@ namespace EShop.Basket.Controllers
     {
         private readonly IBasketService _basketService;
         private readonly ILoginService _loginService;
-        public BasketsController(Services.IBasketService basketService)
+        public BasketsController(Services.IBasketService basketService , ILoginService loginService )
         {
             _basketService = basketService;
+            _loginService = loginService;
         }
         
         [ProducesResponseType(StatusCodes.Status200OK)]
