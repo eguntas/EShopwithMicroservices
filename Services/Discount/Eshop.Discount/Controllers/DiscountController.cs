@@ -17,16 +17,16 @@ namespace Eshop.Discount.Controllers
             _discountService = discountService;
         }
         [HttpGet]
-        public async Task<IActionResult> DiscountCouponList() 
-        { 
-           var values =await _discountService.GetAllCouponAsync();
-           return Ok(values);
+        public async Task<IActionResult> DiscountCouponList()
+        {
+            var values = await _discountService.GetAllCouponAsync();
+            return Ok(values);
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetDiscountByIdCoupon(int id) 
-        { 
-            var values =await _discountService.GetByIdCouponAsync(id);
-            return Ok(values);  
+        public async Task<IActionResult> GetDiscountByIdCoupon(int id)
+        {
+            var values = await _discountService.GetByIdCouponAsync(id);
+            return Ok(values);
         }
         [HttpPost]
         public async Task<IActionResult> DiscountCreateCoupon(CreateCouponDto createCouponDto)
@@ -45,7 +45,12 @@ namespace Eshop.Discount.Controllers
         {
             await _discountService.DeleteCouponAsync(Id);
             return Ok("Coupon delete success");
-
+        }
+        [HttpGet("GetCodeDetailByCodeAsync")]
+        public async Task<IActionResult> GetCodeDetailByCode(string code)
+        {
+            var values = await _discountService.GetCodeDetailByCodeAsync(code);
+            return Ok(values);
         }
     }
 }

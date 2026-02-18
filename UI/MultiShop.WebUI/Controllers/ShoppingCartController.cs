@@ -16,13 +16,19 @@ namespace MultiShop.WebUI.Controllers
             _productService = productService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string code , int discountRate ,decimal discountPrice)
         {
             ViewBag.Directory1 = "Home";
             ViewBag.Directory2 = "Product";
             ViewBag.Directory3 = "Shopping Card";
+            var total = await _basketService.GetBasket();
+            var tax = total.TotalPrice > 0 ? total.TotalPrice/10 : 0;
+            ViewBag.Price = total.TotalPrice;
+            ViewBag.Tax = tax;
+            ViewBag.Total = total.TotalPrice + tax;
+            ViewBag.Rate = discountRate;
+            ViewBag.DiscountPrice = discountPrice;
 
-            //var basket = await _basketService.GetBasket();
             return View();
         }
 

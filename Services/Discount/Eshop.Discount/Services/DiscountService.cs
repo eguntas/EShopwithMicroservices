@@ -61,6 +61,17 @@ namespace Eshop.Discount.Services
             }
         }
 
+        public async Task<ResultCouponDto> GetCodeDetailByCodeAsync(string code)
+        {
+            string query = "select * from Coupons where Code = @code";
+            var parameters = new DynamicParameters();
+            parameters.Add("code", code);
+            using (var connection = _context.CreatedConnection())
+            {
+                return await connection.QueryFirstOrDefaultAsync<ResultCouponDto>(query, parameters);
+            }
+        }
+
         public async Task UpdateCouponAsync(UpdateCouponDto updateCouponDto)
         {
             string query = "update Coupons set Code=@code , Rate=@rate, IsActive=@isActive , ValidDate=@validDate where CouponId=@Id ";
