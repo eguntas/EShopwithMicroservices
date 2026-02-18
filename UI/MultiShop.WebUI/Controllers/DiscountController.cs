@@ -28,7 +28,6 @@ namespace MultiShop.WebUI.Controllers
             var totalPriceWithTax = basketValues.TotalPrice + (basketValues.TotalPrice / 10);
             var discountAmount = totalPriceWithTax * result.Rate / 100;
             var discountedPrice = totalPriceWithTax - discountAmount;
-            //ViewBag.DiscountAmount = discountAmount;
             return RedirectToAction("Index", "ShoppingCart", new { code = code , discountRate = result.Rate , discountPrice = discountedPrice });
           
         }

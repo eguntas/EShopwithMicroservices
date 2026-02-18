@@ -24,7 +24,7 @@ namespace Eshop.Order.Application.Features.CQRS.Handlers.AddressHandlers
             { 
                 AddressId = x.AddressId,
                 UserId = x.UserId,  
-                Detail = x.Detail,
+                Detail = x.Detail1,
                 District = x.District,
                 City = x.City
             }).ToList();

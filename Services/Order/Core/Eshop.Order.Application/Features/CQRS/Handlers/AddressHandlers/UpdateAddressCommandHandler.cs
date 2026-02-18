@@ -22,7 +22,7 @@ namespace Eshop.Order.Application.Features.CQRS.Handlers.AddressHandlers
             var value = await _repository.GetByIdAsync(command.AddressId);
             value.UserId = command.UserId;
             value.District = command.District;
-            value.Detail = command.Detail;  
+            value.Detail1 = command.Detail;  
             value.City = command.City;
             await _repository.UpdateAsync(value);
         }

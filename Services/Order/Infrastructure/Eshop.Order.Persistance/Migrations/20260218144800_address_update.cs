@@ -1,0 +1,102 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace Eshop.Order.Persistance.Migrations
+{
+    public partial class address_update : Migration
+    {
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.RenameColumn(
+                name: "Detail",
+                table: "Addresses",
+                newName: "ZipCode");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Description",
+                table: "Addresses",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Detail1",
+                table: "Addresses",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Detail2",
+                table: "Addresses",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Email",
+                table: "Addresses",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Name",
+                table: "Addresses",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Phone",
+                table: "Addresses",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Surname",
+                table: "Addresses",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+        }
+
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "Description",
+                table: "Addresses");
+
+            migrationBuilder.DropColumn(
+                name: "Detail1",
+                table: "Addresses");
+
+            migrationBuilder.DropColumn(
+                name: "Detail2",
+                table: "Addresses");
+
+            migrationBuilder.DropColumn(
+                name: "Email",
+                table: "Addresses");
+
+            migrationBuilder.DropColumn(
+                name: "Name",
+                table: "Addresses");
+
+            migrationBuilder.DropColumn(
+                name: "Phone",
+                table: "Addresses");
+
+            migrationBuilder.DropColumn(
+                name: "Surname",
+                table: "Addresses");
+
+            migrationBuilder.RenameColumn(
+                name: "ZipCode",
+                table: "Addresses",
+                newName: "Detail");
+        }
+    }
+}
