@@ -26,6 +26,11 @@ namespace EShop.Cargo.BusinessLayer.Concreate
             return _cargoCustomerDal.GetById(Id);
         }
 
+        public CargoCustomer TGetCargoCustomerById(string id)
+        {
+            return _cargoCustomerDal.GetCargoCustomerById(id);
+        }
+
         public void TInsert(CargoCustomer entity)
         {
             _cargoCustomerDal.Insert(entity);

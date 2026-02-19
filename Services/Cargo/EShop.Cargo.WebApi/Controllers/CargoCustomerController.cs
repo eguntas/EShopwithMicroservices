@@ -42,7 +42,9 @@ namespace EShop.Cargo.WebApi.Controllers
                 Email = dto.Email,
                 District = dto.District,
                 City = dto.City,
-                Address = dto.Address
+                Address = dto.Address,
+                UserCustomerId = dto.UserCustomerId
+                
             };
             _cargoCustomerService.TInsert(cargoCustomer);
             return Ok("Cargo customer added");
@@ -66,11 +68,19 @@ namespace EShop.Cargo.WebApi.Controllers
                 Email = dto.Email,
                 District = dto.District,
                 City = dto.City,
-                Address = dto.Address
+                Address = dto.Address,
+                UserCustomerId = dto.UserCustomerId
             };
             _cargoCustomerService.TUpdate(cargoCustomer);
             return Ok("Cargo customer updated");
         }
+
+        [HttpGet("GetCargoCustomerById")]
+        public IActionResult GetCargoCustomerById(string id) 
+        {
+            return Ok(_cargoCustomerService.TGetCargoCustomerById(id));
+        }
+
     }
 
 }

@@ -8,3 +8,4 @@ Order -> 7004
 Comment -> 7005
 Payment -> 7006
 Images -> 7007
+Message -> 7008
