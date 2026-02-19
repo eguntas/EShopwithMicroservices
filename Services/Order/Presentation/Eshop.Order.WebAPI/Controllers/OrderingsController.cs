@@ -3,6 +3,7 @@ using Eshop.Order.Application.Features.Mediator.Queries.OrderingQueries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Eshop.Order.WebAPI.Controllers
 {
@@ -47,6 +48,11 @@ namespace Eshop.Order.WebAPI.Controllers
             await _mediator.Send(command);
             return Ok("Updated Order");
         }
-
+        [HttpGet("GetOrderingByUserId/{id}")]
+        public async Task<IActionResult> GetOrderingByUserId(string id)
+        {
+            var result = await _mediator.Send(new GetOrderingByUserIdQuery(id));
+            return Ok(result);
+        }
     }
 }
