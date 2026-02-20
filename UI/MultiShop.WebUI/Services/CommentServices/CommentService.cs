@@ -31,6 +31,13 @@ namespace MultiShop.WebUI.Services.CommentServices
 
         }
 
+        public async Task<int> GetActiveCommentCountAsync()
+        {
+            var response = await _httpClient.GetAsync("Comment/GetActiveCommentCount");
+            var comment = await response.Content.ReadFromJsonAsync<int>();
+            return comment;
+        }
+
         public async Task<List<ResultCommentDto>> GetAllCommentAsync()
         {
             var response = await _httpClient.GetAsync("Comment");
@@ -43,6 +50,20 @@ namespace MultiShop.WebUI.Services.CommentServices
             var response = await _httpClient.GetAsync($"Comment/{id}");
             var brand = await response.Content.ReadFromJsonAsync<UpdateCommentDto>();
             return brand ?? new UpdateCommentDto();
+        }
+
+        public async Task<int> GetPassiveCommentCountAsync()
+        {
+            var response = await _httpClient.GetAsync("Comment/GetPassiveCommentCount");
+            var comment = await response.Content.ReadFromJsonAsync<int>();
+            return comment;
+        }
+
+        public async Task<int> GetTotalCommentCountAsync()
+        {
+            var response = await _httpClient.GetAsync("Comment/GetTotalCommentCount");
+            var comment = await response.Content.ReadFromJsonAsync<int>();
+            return comment;
         }
 
         public async Task UpdateCommentAsync(UpdateCommentDto updateCommentDto)

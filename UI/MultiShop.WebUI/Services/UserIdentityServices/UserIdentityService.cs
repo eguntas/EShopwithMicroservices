@@ -13,7 +13,7 @@ namespace MultiShop.WebUI.Services.UserIdentityServices
 
         public async Task<List<ResultUserDto>> GetAllUser()
         {
-            var response = await _httpClient.GetAsync("api/users/GetAllUserList");
+            var response = await _httpClient.GetAsync("https://localhost:5000/api/users/GetAllUserList");
             var users = await response.Content.ReadFromJsonAsync<List<ResultUserDto>>();
             return users ?? new List<ResultUserDto>();
         }
