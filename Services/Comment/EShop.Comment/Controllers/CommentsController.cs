@@ -59,5 +59,26 @@ namespace EShop.Comment.Controllers
             var values = _commentContext.UserComments.Where(x => x.ProductId == id).ToList();
             return Ok(values);
         }
+
+        [HttpGet("GetActiveCommentCount")]
+        public IActionResult GetActiveCommentCount()
+        {
+            var values = _commentContext.UserComments.Where(x => x.Status == true).Count();
+            return Ok(values);
+        }
+
+        [HttpGet("GetPassiveCommentCount")]
+        public IActionResult GetPassiveCommentCount()
+        {
+            var values = _commentContext.UserComments.Where(x => x.Status == false).Count();
+            return Ok(values);
+        }
+        [HttpGet("GetTotalCommentCount")]
+        public IActionResult GetTotalCommentCount()
+        {
+            var values = _commentContext.UserComments.Count();
+            return Ok(values);
+        }
+
     }
 }

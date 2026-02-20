@@ -54,6 +54,13 @@ namespace EShop.Message.Controllers
             return Ok("Message updated success");
         }
 
+        [HttpGet("GetTotalMessageCountAsync")]
+         public async Task<IActionResult> GetTotalMessageCountAsync()
+        {
+            var values = await _userMessageService.GetTotalMessageCountAsync();
+            return Ok(values);
+        }
+
 
 
     }

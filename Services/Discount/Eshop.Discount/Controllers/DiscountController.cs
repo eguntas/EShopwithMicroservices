@@ -52,5 +52,12 @@ namespace Eshop.Discount.Controllers
             var values = await _discountService.GetCodeDetailByCodeAsync(code);
             return Ok(values);
         }
+
+        [HttpGet("GetDiscountCouponCount")]
+        public async Task<IActionResult> GetDiscountCouponCount()
+        {
+            var values = await _discountService.GetDiscountCouponCount();
+            return Ok(values);
+        }
     }
 }

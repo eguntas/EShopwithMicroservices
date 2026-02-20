@@ -12,6 +12,7 @@ using EShop.Category.Services.FeatureServices;
 using EShop.Category.Services.FeatureSliderServices;
 using EShop.Category.Services.OfferDiscountServices;
 using EShop.Category.Services.SpecialOfferServices;
+using EShop.Category.Services.StatisticServices;
 using EShop.OfferDiscount.Services.OfferDiscountServices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
@@ -37,6 +38,7 @@ builder.Services.AddScoped<IOfferDiscountService, OfferDiscountService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IStatisticService, StatisticService>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
