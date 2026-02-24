@@ -60,8 +60,11 @@ namespace EShop.Message.Controllers
             var values = await _userMessageService.GetTotalMessageCountAsync();
             return Ok(values);
         }
-
-
+        [HttpGet("GetTotalMessageCountByReceiverId")]
+        public async Task<IActionResult> GetTotalMessageCountByReceviverId(string id)
+        {
+            return Ok(await _userMessageService.GetTotalMessageCountByReceiverId(id));
+        }
 
     }
 }
