@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Eshop.Order.Application\Eshop.Order.Application.csproj" />
-    <ProjectReference Include="..\..\Core\Eshop.Order.Domain\Eshop.Order.Domain.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\Eshop.Order.Persistance\Eshop.Order.Persistance.csproj" />
+    <ProjectReference Include="..\..\Core\Eshop.Order.Application\EShop.Order.Application.csproj" />
+    <ProjectReference Include="..\..\Core\Eshop.Order.Domain\EShop.Order.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Eshop.Order.Persistance\EShop.Order.Persistance.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Eshop.Cargo.DataAccessLayer\Eshop.Cargo.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Eshop.Cargo.DataAccessLayer\EShop.Cargo.DataAccessLayer.csproj" />
     <ProjectReference Include="..\EShop.Cargo.EntityLayer\EShop.Cargo.EntityLayer.csproj" />
   </ItemGroup>
 

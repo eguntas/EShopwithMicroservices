@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EShop.Cargo.BusinessLayer\EShop.Cargo.BusinessLayer.csproj" />
-    <ProjectReference Include="..\Eshop.Cargo.DataAccessLayer\Eshop.Cargo.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Eshop.Cargo.DataAccessLayer\EShop.Cargo.DataAccessLayer.csproj" />
     <ProjectReference Include="..\EShop.Cargo.DtoLayer\EShop.Cargo.DtoLayer.csproj" />
     <ProjectReference Include="..\EShop.Cargo.EntityLayer\EShop.Cargo.EntityLayer.csproj" />
   </ItemGroup>

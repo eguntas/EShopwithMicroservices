@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Eshop.Order.Application\Eshop.Order.Application.csproj" />
-    <ProjectReference Include="..\..\Core\Eshop.Order.Domain\Eshop.Order.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\Eshop.Order.Application\EShop.Order.Application.csproj" />
+    <ProjectReference Include="..\..\Core\Eshop.Order.Domain\EShop.Order.Domain.csproj" />
   </ItemGroup>
 
 </Project>

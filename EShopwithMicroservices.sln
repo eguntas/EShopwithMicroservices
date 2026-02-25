@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{24
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{4F658E83-252D-4F8F-A558-E66D01321A89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eshop.Discount", "Services\Discount\Eshop.Discount\Eshop.Discount.csproj", "{F18C00A5-0184-46DC-8490-867D1C4B39FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.Discount", "Services\Discount\Eshop.Discount\EShop.Discount.csproj", "{F18C00A5-0184-46DC-8490-867D1C4B39FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{A6B6B0EB-6CF6-426C-B9DE-87373CD96EE2}"
 EndProject
@@ -17,17 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{486AB05D-D896-4087-BF82-C0A74847ADD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Order.Domain", "Services\Order\Core\Eshop.Order.Domain\Eshop.Order.Domain.csproj", "{CCFB228E-DC21-4F23-B120-C380F2670263}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Order.Domain", "Services\Order\Core\Eshop.Order.Domain\EShop.Order.Domain.csproj", "{CCFB228E-DC21-4F23-B120-C380F2670263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Order.Application", "Services\Order\Core\Eshop.Order.Application\Eshop.Order.Application.csproj", "{23E5C393-8563-4E6B-8D6B-192F07C6704F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Order.Application", "Services\Order\Core\Eshop.Order.Application\EShop.Order.Application.csproj", "{23E5C393-8563-4E6B-8D6B-192F07C6704F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Order.Persistance", "Services\Order\Infrastructure\Eshop.Order.Persistance\Eshop.Order.Persistance.csproj", "{3C9D4F94-E407-48B5-8F12-75712DD4DFFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Order.Persistance", "Services\Order\Infrastructure\Eshop.Order.Persistance\EShop.Order.Persistance.csproj", "{3C9D4F94-E407-48B5-8F12-75712DD4DFFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Order.WebAPI", "Services\Order\Presentation\Eshop.Order.WebAPI\Eshop.Order.WebAPI.csproj", "{298A2B1B-D0EE-42B5-95ED-96B4CA7F3408}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Order.WebAPI", "Services\Order\Presentation\Eshop.Order.WebAPI\EShop.Order.WebAPI.csproj", "{298A2B1B-D0EE-42B5-95ED-96B4CA7F3408}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{036F2603-E531-44DE-A1D2-ECE3D0BA8C9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShopwithMicroservices.IdentityServer", "IdentityServer\EShopwithMicroservices.IdentityServer\EShopwithMicroservices.IdentityServer.csproj", "{8DD74750-C094-496D-B6F3-D8F25525958B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.IdentityServer", "IdentityServer\EShopwithMicroservices.IdentityServer\EShop.IdentityServer.csproj", "{8DD74750-C094-496D-B6F3-D8F25525958B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirement", "Requirement", "{B43056FE-59DB-4603-97DC-35C6B8AE41F8}"
 	ProjectSection(SolutionItems) = preProject
@@ -45,7 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Category", "Category", "{1B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Category", "Services\Category\EShop.Category\EShop.Category.csproj", "{572D9782-F18E-4889-9B2C-0158DC46B668}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Cargo.DataAccessLayer", "Services\Cargo\Eshop.Cargo.DataAccessLayer\Eshop.Cargo.DataAccessLayer.csproj", "{18FDAEF0-331F-4DF8-9AE1-404246840B1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Cargo.DataAccessLayer", "Services\Cargo\Eshop.Cargo.DataAccessLayer\EShop.Cargo.DataAccessLayer.csproj", "{18FDAEF0-331F-4DF8-9AE1-404246840B1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Cargo.DtoLayer", "Services\Cargo\EShop.Cargo.DtoLayer\EShop.Cargo.DtoLayer.csproj", "{46E02F2F-55CB-4430-9AFD-D619E65E3A3F}"
 EndProject
@@ -57,9 +57,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Basket", "Services\Ba
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{7E3D8E15-6436-4190-841C-76F9DC0758FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.WebUI", "UI\MultiShop.WebUI\MultiShop.WebUI.csproj", "{CE96619A-8798-4D5D-B107-03915B0C438F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.WebUI", "UI\MultiShop.WebUI\EShop.WebUI.csproj", "{CE96619A-8798-4D5D-B107-03915B0C438F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.DtoLayer", "UI\MultiShop.DtoLayer\MultiShop.DtoLayer.csproj", "{4D8ECFBC-1437-465E-832B-1D30926BD6D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.DtoLayer", "UI\MultiShop.DtoLayer\EShop.DtoLayer.csproj", "{4D8ECFBC-1437-465E-832B-1D30926BD6D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3F044AA-34D8-4F3A-ACDE-A4EB27211B62}"
 	ProjectSection(SolutionItems) = preProject
@@ -74,11 +74,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{D32E8FF5-D1C4-47AA-9EB4-2583AE0486BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.OcelotGateway", "ApiGateway\MultiShop.OcelotGateway\MultiShop.OcelotGateway.csproj", "{8AC28130-7B10-4097-ADAA-E060982CBCFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.OcelotGateway", "ApiGateway\MultiShop.OcelotGateway\EShop.OcelotGateway.csproj", "{8AC28130-7B10-4097-ADAA-E060982CBCFC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{A82EE1DC-D1F9-488A-ACDF-CE7F862DF66B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Payment", "Services\Payment\MultiShop.Payment\MultiShop.Payment.csproj", "{FE2E3142-649F-4A8B-A7C5-6EF91885ACB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Payment", "Services\Payment\MultiShop.Payment\EShop.Payment.csproj", "{FE2E3142-649F-4A8B-A7C5-6EF91885ACB2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Message", "Message", "{6F2BE8F6-E4ED-4A3C-A3F8-D62D37C67B3B}"
 EndProject
